@@ -39,7 +39,7 @@ export class Application {
     });
     this.app.use(BodyParserJson());
     this.app.useGlobalFilters(new HttpErrorFilter(this.loggerService));
-
+    this.app.enableCors(true);
     this.app.use((req, _, next) => {
       next();
     });
