@@ -6,7 +6,7 @@
   "scripts": {
     "start:test": "ts-node -r tsconfig-paths/register test.ts",
     "start:local": "listen_port=4000 stage=local ts-node -r tsconfig-paths/register src/Main.ts",
-    "start:prod": "listen_port=80 stage=prod ts-node -r tsconfig-paths/register src/Main.ts",
+    "start:prod": "listen_port=8080 stage=prod ts-node -r tsconfig-paths/register src/Main.ts",
     "start:main": "ts-node -r tsconfig-paths/register src/Main.ts",
     "build": "nest build",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js -d src/scripts/DataSource.ts",
@@ -29,6 +29,7 @@
     "@nestjs/config": "^3.1.1",
     "@nestjs/core": "^10.2.6",
     "@nestjs/platform-express": "^10.2.6",
+    "@nestjs/throttler": "^5.1.2",
     "@nestjs/typeorm": "^10.0.0",
     "@types/app-root-path": "^1.2.6",
     "@types/body-parser": "^1.19.3",
